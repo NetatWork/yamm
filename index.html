@@ -189,7 +189,7 @@
             border: 0px;
             border-bottom: 1px solid #E9E9E9;
             width: 100px;
-            background-image: url('/yamm/assets/img/search.png');
+            background-image: url('/assets/img/search.png');
             background-repeat: no-repeat;
             background-position: 102px 5px;
         }
@@ -202,16 +202,7 @@
         
         #search {
             border-bottom: 1px solid #E9E9E9;
-            background-image: url('/yamm/assets/img/search.png');
-        }
-        
-        .btn.btn-navbar.collapsed, .btn.btn-navbar {
-            background: none;
-            color: black;
-            border: none;
-            font-size: 2em;
-            display: block;
-            display: none;
+            background-image: url('/assets/img/search.png');
         }
         
         .btn.btn-navbar:hover {
@@ -221,8 +212,51 @@
             color: black;
         }
         
+        .m-menu-item {
+            padding: 0 0px 0 20px;
+            border-left: 1px solid #f2f2f2;
+        }
+        
+        .m-menu-item .media-object {
+            float:left;
+            margin-bottom:20px;
+            width: 100%; 
+            height: auto;
+        }
+        
+        .btn.btn-navbar.collapsed, .btn.btn-navbar, .btn.btn-navbar.collapsed:visited {
+            display:none;
+        }
+        
+        .m-menu-item-action {
+            width: auto;
+            display: block;
+        }
+        
+        /*******ADJUSTED WSB DOT STYLES*********/
+        
+        #menu-active, .dropdown:hover>.dot {
+            display: block;
+        }
+        
+        .dot {
+            z-index: 1;
+            font-size: 4em;
+            color: #f85a40;
+            text-align: center;
+            margin-top: -0.3em;
+            display:none;
+        }
+        
+        
+        /*****RESPONSIVE STYLES*******/
         
         @media (max-width: 979px) { 
+        
+            .span2.m-menu-item {
+                padding: none;
+                border-left: none;
+            }
         
             .dropdown {
                 width: 100%;
@@ -292,8 +326,16 @@
                  margin-right: 15px;
             }
         
-    }
+            .btn.btn-navbar.collapsed, .btn.btn-navbar, .btn.btn-navbar.collapsed:visited {
+            background: none;
+            color: black;
+            border: none;
+            font-size: 2em;
+            display: block;
+        }
         
+    }
+
         
     </style>
 
@@ -311,7 +353,7 @@
       
       <div class="navbar yamm">
           
-          <a class="brand" href="#"><img src="/yamm/assets/img/we-see-beauty-logo.png"></a>
+          <a class="brand" href="#"><img src="/assets/img/we-see-beauty-logo.png"></a>
           
         <div class="navbar-inner">
           <div class="container">
@@ -319,95 +361,68 @@
             <div class="nav-collapse collapse" id="nav1">
               <ul class="nav">
                 <!-- Classic list -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> MAKEUP </a>
+                <li class="dropdown yamm-fullwidth">
+                  <a href="#" class="dropdown-toggle dotwrap" data-toggle="dropdown"> MAKEUP </a>
+                    <div class="dot" id="menu-active">·</div>
                   <ul class="dropdown-menu">
                     <li>
                       <!-- Content container to add padding -->
-                      <div class="yamm-content">
-                        <ul class="span2 unstyled">
-                          <li><p><strong>Section Title</strong></p></li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                        </ul>
-                        <ul class="span2 unstyled">
-                          <li><p><strong>Links Title</strong></p></li>
-                          <li>
-                            <a href="#"> Link Item </a>
-                          </li>
-                          <li>
-                            <a href="#"> Link Item </a>
-                          </li>
-                          <li>
-                            <a href="#"> Link Item </a>
-                          </li>
-                          <li>
-                            <a href="#"> Link Item </a>
-                          </li>
-                          <li>
-                            <a href="#"> Link Item </a>
-                          </li>
-                          <li>
-                            <a href="#"> Link Item </a>
-                        </ul>
-                        <ul class="span2 unstyled">
-                          <li><p><strong>Section Title</strong></p></li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                        </ul>
-                        <ul class="span2 unstyled">
-                          <li><p><strong>Section Title</strong></p></li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            List Item
-                          </li>
-                          <li>
-                            <ul>
-                              <li>
-                                <a href="#"> Link Item </a>
-                              </li>
-                              <li>
-                                <a href="#"> Link Item </a>
-                              </li>
-                              <li>
-                                <a href="#"> Link Item </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                      <div class="row-fluid">
+                        
+                           <div class="span2 m-menu-item">
+                                <img class="media-object" class="" src="" alt="placeholder-image">
+                                <div class="media-body">
+                                    <h3>Media Heading</h3>
+                                    <p>Description of the class including, etc and you know...</p>
+                                </div>
+                                    <a href="#" class="_view_more _link view_more cta-action cta m-menu-item-action">// EXPLORE</a>
+                            </div>
+                          
+                           <div class="span2 m-menu-item">
+                                <img class="media-object" class="" src="" alt="placeholder-image">
+                                <div class="media-body">
+                                    <h3>Media Heading</h3>
+                                    <p>Description of the class including, etc and you know...</p>
+                                </div>
+                                    <a href="#" class="_view_more _link view_more cta-action cta m-menu-item-action">// EXPLORE</a>
+                            </div>
+                          
+                           <div class="span2 m-menu-item">
+                                <img class="media-object" class="" src="" alt="placeholder-image">
+                                <div class="media-body">
+                                    <h3>Media Heading</h3>
+                                    <p>Description of the class including, etc and you know...</p>
+                                </div>
+                                    <a href="#" class="_view_more _link view_more cta-action cta m-menu-item-action">// EXPLORE</a>
+                            </div>
+                          
+                           <div class="span2 m-menu-item">
+                                <img class="media-object" class="" src="" alt="placeholder-image">
+                                <div class="media-body">
+                                    <h3>Media Heading</h3>
+                                    <p>Description of the class including, etc and you know...</p>
+                                </div>
+                                    <a href="#" class="_view_more _link view_more cta-action cta m-menu-item-action">// EXPLORE</a>
+                            </div>
+
+                           <div class="span2 m-menu-item">
+                                <img class="media-object" class="" src="" alt="placeholder-image">
+                                <div class="media-body">
+                                    <h3>Media Heading</h3>
+                                    <p>Description of the class including, etc and you know...</p>
+                                </div>
+                                    <a href="#" class="_view_more _link view_more cta-action cta m-menu-item-action">// EXPLORE</a>
+                            </div>
+
+                           <div class="span2 m-menu-item">
+                                <img class="media-object" class="pull-left" src="" alt="placeholder-image">
+                                <div class="media-body">
+                                    <h3>Media Heading</h3>
+                                    <p>Description of the class including, etc and you know...</p>
+                                </div>
+                                    <a href="#" class="_view_more _link view_more cta-action cta m-menu-item-action">// EXPLORE</a>
+                            </div>                          
+                          
                       </div>
                     </li>
                   </ul>
@@ -415,75 +430,35 @@
                 <!-- Accordion demo -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"> LOOKS </a>
+                    <div class="dot menu-active">·</div>
                   <ul class="dropdown-menu">
                     <li>
                       <div class="yamm-content">
+                        
+                          <!-- thumbnails needs a row-fluid to make span fluid -->
                         <div class="row-fluid">
-                          <div id="accordion2" class="accordion  span6">
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="#collapseOne" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #1 </a>
-                              </div>
-                              <div class="accordion-body collapse" id="collapseOne" style="height: 0px;">
-                                <div class="accordion-inner">
-                                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="#collapseTwo" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle"> Collapsible Group Item #2 </a>
-                              </div>
-                              <div class="accordion-body collapse" id="collapseTwo">
-                                <div class="accordion-inner">
-                                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="#collapseThree" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle"> Collapsible Group Item #3 </a>
-                              </div>
-                              <div class="accordion-body collapse" id="collapseThree">
-                                <div class="accordion-inner">
-                                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="accordion3" class="accordion  span6">
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="#collapseOne1" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #1 </a>
-                              </div>
-                              <div class="accordion-body collapse" id="collapseOne1" style="height: 0px;">
-                                <div class="accordion-inner">
-                                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="#collapseTwo1" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle"> Collapsible Group Item #2 </a>
-                              </div>
-                              <div class="accordion-body collapse" id="collapseTwo1">
-                                <div class="accordion-inner">
-                                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="#collapseThree1" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle"> Collapsible Group Item #3 </a>
-                              </div>
-                              <div class="accordion-body collapse" id="collapseThree1">
-                                <div class="accordion-inner">
-                                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <ul class="thumbnails">
+                            <li class="span2">
+                              <a class="thumbnail" href="#"> <img alt="150x190" data-src="holder.js/150x90"> </a>
+                            </li>
+                            <li class="span2">
+                              <a class="thumbnail" href="#"> <img alt="150x190" data-src="holder.js/150x90"> </a>
+                            </li>
+                            <li class="span2">
+                              <a class="thumbnail" href="#"> <img alt="150x190" data-src="holder.js/150x90"> </a>
+                            </li>
+                            <li class="span2">
+                              <a class="thumbnail" href="#"> <img alt="150x190" data-src="holder.js/150x90"> </a>
+                            </li>
+                            <li class="span2">
+                              <a class="thumbnail" href="#"> <img alt="150x190" data-src="holder.js/150x90"> </a>
+                            </li>
+                            <li class="span2">
+                              <a class="thumbnail" href="#"> <img alt="150x190" data-src="holder.js/150x90"> </a>
+                            </li>
+                          </ul>
                         </div>
+                          
                       </div>
                     </li>
                   </ul>
@@ -496,6 +471,7 @@
                 <!-- Classic dropdown -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"> SKINCARE </a><!-- Classic Dropdown -->
+                    <div class="dot menu-active">·</div>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                     <li>
                       <a tabindex="-1" href="#"> Action </a>
@@ -512,6 +488,8 @@
                     </li>
                   </ul>
                 </li>
+                  
+                  
                 <!-- Pictures -->
                 <li class="dropdown yamm-fullwidth">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"> ACCESSORIES </a>
